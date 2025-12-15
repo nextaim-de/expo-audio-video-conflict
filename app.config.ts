@@ -2,19 +2,19 @@ import { ConfigContext, ExpoConfig } from "expo/config";
 
 export default ({ config }: ConfigContext): ExpoConfig => ({
   ...config,
-  name: "Recorder Test",
-  slug: "recorder-test",
+  name: "expo-audio + video conflict",
+  slug: "expo-audio-video-conflict-repro",
   version: "1.0.0",
   orientation: "portrait",
   icon: "./assets/icon.png",
   userInterfaceStyle: "light",
   newArchEnabled: true,
   ios: {
-    bundleIdentifier: "com.test.recorder",
+    bundleIdentifier: "com.expo.audio.video.conflict.repro",
     supportsTablet: true,
   },
   android: {
-    package: "com.test.recorder",
+    package: "com.expo.audio.video.conflict.repro",
     adaptiveIcon: {
       foregroundImage: "./assets/adaptive-icon.png",
       backgroundColor: "#ffffff",
@@ -25,7 +25,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
       "expo-audio",
       {
         microphonePermission:
-          "We use the microphone to capture your voice and upload recordings.",
+          "This app needs microphone access to demonstrate the audio recording bug.",
       },
     ],
   ],
